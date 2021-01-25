@@ -21,18 +21,18 @@ public class predicateExample {
                 .filter(biggerThan5)
                 .collect(Collectors.toList());
 
-        System.out.println(pTest1); // 7, 20, 77, 14, 6
+        System.out.println(pTest1); 
 
         List<Integer> pTest2 = list.stream()
                 .filter(x -> (x % 2 == 0) && (x < 10)).collect(Collectors.toList());
 
-        System.out.println(pTest2); //2, 6
+        System.out.println(pTest2); 
 
         List<Integer> pTest3 = list.stream()
                 .filter(biggerThan5.and(lessThan10).and(even))
                 .collect(Collectors.toList());
         
-        System.out.println(pTest3); // 6
+        System.out.println(pTest3); 
 
     }
 
